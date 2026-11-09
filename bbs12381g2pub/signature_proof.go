@@ -30,7 +30,7 @@ func (sp *PoKOfSignatureProof) GetBytesForChallenge(revealedMessages map[int]*Si
 	pubKey *PublicKeyWithGenerators) []byte {
 	hiddenCount := pubKey.messagesCount - len(revealedMessages)
 
-	bytesLen := (7 + hiddenCount) * g1UncompressedSize //nolint:gomnd
+	bytesLen := (7 + hiddenCount) * g1UncompressedSize //nolint:mnd
 	bytes := make([]byte, 0, bytesLen)
 
 	bytes = append(bytes, sp.aBar.Bytes()...)

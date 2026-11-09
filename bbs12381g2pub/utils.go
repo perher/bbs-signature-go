@@ -56,7 +56,7 @@ type pokPayload struct {
 	revealed      []int
 }
 
-// nolint:gomnd
+//nolint:mnd
 func parsePoKPayload(bytes []byte) (*pokPayload, error) {
 	if len(bytes) < 2 {
 		return nil, errors.New("invalid size of PoK payload")
@@ -77,7 +77,7 @@ func parsePoKPayload(bytes []byte) (*pokPayload, error) {
 	}, nil
 }
 
-// nolint:gomnd
+//nolint:mnd
 func (p *pokPayload) toBytes() ([]byte, error) {
 	bytes := make([]byte, p.lenInBytes())
 
@@ -106,7 +106,7 @@ func (p *pokPayload) lenInBytes() int {
 }
 
 func lenInBytes(messagesCount int) int {
-	return 2 + (messagesCount / 8) + 1 //nolint:gomnd
+	return 2 + (messagesCount / 8) + 1 //nolint:mnd
 }
 
 func newPoKPayload(messagesCount int, revealed []int) *pokPayload {
