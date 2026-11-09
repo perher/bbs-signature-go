@@ -235,7 +235,7 @@ func computeB(s *ml.Zr, messages []*SignatureMessage, key *PublicKeyWithGenerato
 	cb.add(curve.GenG1, curve.NewZrFromInt(1))
 	cb.add(key.h0, s)
 
-	for i := 0; i < len(messages); i++ {
+	for i := range messages {
 		cb.add(key.h[i], messages[i].FR)
 	}
 
@@ -266,7 +266,7 @@ func (cb *commitmentBuilder) build() *ml.G1 {
 func sumOfG1Products(bases []*ml.G1, scalars []*ml.Zr) *ml.G1 {
 	var res *ml.G1
 
-	for i := 0; i < len(bases); i++ {
+	for i := range bases {
 		b := bases[i]
 		s := scalars[i]
 

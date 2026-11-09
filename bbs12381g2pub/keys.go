@@ -62,7 +62,7 @@ func (pk *PublicKey) ToPublicKeyWithGenerators(messagesCount int) (*PublicKeyWit
 
 		iBytes := uint32ToBytes(uint32(i))
 
-		for j := 0; j < len(iBytes); j++ {
+		for j := range iBytes {
 			dataCopy[j+offset] = iBytes[j]
 		}
 
