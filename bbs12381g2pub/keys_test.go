@@ -11,7 +11,7 @@ import (
 	"crypto/sha256"
 	"testing"
 
-	"github.com/btcsuite/btcutil/base58"
+	"github.com/btcsuite/btcd/address/v2/base58"
 	"github.com/stretchr/testify/require"
 
 	bbs "github.com/trustbloc/bbs-signature-go/bbs12381g2pub"
