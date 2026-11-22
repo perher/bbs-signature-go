@@ -4,11 +4,11 @@
 
 module github.com/trustbloc/bbs-signature-go
 
-go 1.26.8
+go 1.26.10
 
 require (
 	github.com/IBM/mathlib v0.3.2
-	github.com/btcsuite/btcutil v1.0.3-0.20201208143702-a53e38424cce
+	github.com/btcsuite/btcd/address/v2 v2.0.1
 	github.com/stretchr/testify v1.12.1
 	golang.org/x/crypto v0.59.0
 )
