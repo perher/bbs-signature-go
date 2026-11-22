@@ -4,7 +4,7 @@
 
 module github.com/trustbloc/bbs-signature-go
 
-go 1.25
+go 1.26
 
 require (
 	github.com/IBM/mathlib v0.0.3-0.20260123144934-21c357e3e46f
