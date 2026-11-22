@@ -124,7 +124,7 @@ func newVC2Signature(d *ml.G1, r3 *ml.Zr, pubKey *PublicKeyWithGenerators, sPrim
 
 	secrets2 = append(secrets2, sPrime)
 
-	for i := 0; i < messagesCount; i++ {
+	for i := range messagesCount {
 		if _, ok := revealedMessages[i]; ok {
 			continue
 		}
